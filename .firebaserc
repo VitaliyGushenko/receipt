@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "recept-10ea1": {
+      "hosting": {
+        "receipts": [
+          "recept-10ea1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "recept-10ea1"
+  }
+}
