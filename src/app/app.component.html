@@ -1,6 +1,7 @@
-<form>
-  <input type="text" name="name" [(ngModel)]="data.name">
-  <input type="email" name="email" [(ngModel)]="data.email">
-  <input type="password" name="password" [(ngModel)]="data.password">
-  <button (click)="save()">Save</button>
-</form>
+<span *ngIf="(auth.isLoading$ | async)">Loading...</span>
+<div *ngIf=" (auth.isLoading$ | async) == false && ((auth.user$ | async)) as user ">
+  {{ user.email }}
+  <button (click)="auth.logOut()"> Выход</button>
+</div>
+
+<app-register *ngIf="(auth.user$ | async) === null && (auth.isLoading$ | async) == false"></app-register>

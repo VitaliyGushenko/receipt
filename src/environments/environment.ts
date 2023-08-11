@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
 
 export const environment = {
   firebase: {
@@ -35,3 +36,4 @@ export const environment = {
 
 // Initialize Firebase
 export const app = initializeApp(environment.firebase);
+export const auth = getAuth(app);

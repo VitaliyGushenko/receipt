@@ -1,0 +1,10 @@
+<form >
+  <input type="email" name="email" [(ngModel)]="data.email">
+  <input type="password" name="password" [(ngModel)]="data.password">
+    <button type="submit" (click)="loginOrRegister(true)" class="btn btn-default">Register</button>
+ </form>
+<form >
+  <input type="email" name="email" [(ngModel)]="data.email">
+  <input type="password" name="password" [(ngModel)]="data.password">
+    <button type="submit" (click)="loginOrRegister(false)" class="btn btn-default">LogIn</button>
+ </form>
